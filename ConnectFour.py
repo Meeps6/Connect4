@@ -1,5 +1,5 @@
 import pygame
-import sys
+import sys, os
 
 # Define constants for the board dimensions
 ROWS = 6
@@ -136,9 +136,9 @@ def main():
                 # Check for win
                 if check_win(board, turn):
                     if (turn == 1) :
-                        draw_message = "The Player Wins!"
+                        draw_message = "RED Wins!"
                     else :
-                        draw_message = "ChatGPT Wins!"
+                        draw_message = "YELLOW Wins!"
                     draw_board(board, draw_message)
                     game_over = True
                     answer = input("Do you want to play again? (Y/N): ")
